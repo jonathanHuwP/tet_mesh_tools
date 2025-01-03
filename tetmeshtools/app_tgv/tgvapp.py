@@ -47,4 +47,4 @@ class TGVApp(qw.QApplication):
         window.resize(500, 300)
         window.show()
 
-        self.exec_()
+        self.exec()

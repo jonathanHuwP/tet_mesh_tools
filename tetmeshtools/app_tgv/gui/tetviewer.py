@@ -29,6 +29,7 @@ import PyQt6.QtWidgets as qw
 import PyQt6.QtCore as qc
 import PyQt6.QtGui as qg
 from PyQt6.QtCore import Qt
+from PyQt6 import QtOpenGLWidgets as qgl
 
 import OpenGL.GL as gl
 import OpenGL.GLU as glu
@@ -49,7 +50,7 @@ class MouseStates(Enum):
     ## zooming
     ZOOM = 2
 
-class TetViewer(qw.QOpenGLWidget):
+class TetViewer(qgl.QOpenGLWidget):
     """
     subclass of QOpenGLWidget (drawing area / graphics context) provides all drawing methods
     """
