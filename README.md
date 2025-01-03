@@ -31,7 +31,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ## Developed With
 
-The project was developed using Python 3.9 and Anaconda, Inc. on Windows 10 systems. PyQt5 was and pyopengl were used in the viewer.
+The project was developed using Python 3.9 and Anaconda, Inc. on Windows 10 systems. PyQt6 was and pyopengl were used in the viewer.
 
 ## Table of Contents
 
@@ -76,7 +76,7 @@ If you want to use them to write your own python scripts you can now import them
 
 ### Qt User Interface
 
-The user interface of the viewer is written in Qt, using PyQt5. To change the main window itself edit the `resources/tetgenviewermain.ui` file. Editing is best done using QtDesigner, which can be run from the command line by typing `designer`. If callback function names are changed then manual editing is required.
+The user interface of the viewer is written in Qt, using PyQt6. To change the main window itself edit the `resources/tetgenviewermain.ui` file. Editing is best done using QtDesigner, which can be run from the command line by typing `designer`. If callback function names are changed then manual editing is required.
 
 To produce the Ui_tetgenviewermain.py file you have to use the PyQt pyuic5 program.
 

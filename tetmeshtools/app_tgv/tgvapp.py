@@ -21,7 +21,7 @@ This work was funded by Joanna Leng's EPSRC funded RSE Fellowship (EP/R025819/1)
 # pylint: disable = import-error
 # pylint: disable = c-extension-no-member
 
-import PyQt5.QtWidgets as qw
+import PyQt6.QtWidgets as qw
 
 from tetmeshtools.app_tgv.gui.tetgenviewermain import TetgenViewerMain
 

@@ -24,8 +24,8 @@ import pathlib
 import csv
 import numpy as np
 
-import PyQt5.QtWidgets as qw
-import PyQt5.QtCore as qc
+import PyQt6.QtWidgets as qw
+import PyQt6.QtCore as qc
 
 import tetmeshtools.meshtools.tetgenread as tr
 import tetmeshtools.meshtools.tetgenstructs as ts

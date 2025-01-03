@@ -35,7 +35,7 @@ Originally, the meshes were created from cryo-em images using TetGen [SI2015] th
 
 # Design
 
-Since the FFEA project already had several support tools implemented in Python this work was carried out in Python 3.9.  Graphical user interfaces, needed for the mesh viewer, were implemented using PyQt5 and the 3D graphics scene was implemented using pyopengl.  The package was built in a Conda environment, pip install allows useful command line scripts to be provided.
+Since the FFEA project already had several support tools implemented in Python this work was carried out in Python 3.9.  Graphical user interfaces, needed for the mesh viewer, were implemented using PyQt6 and the 3D graphics scene was implemented using pyopengl.  The package was built in a Conda environment, pip install allows useful command line scripts to be provided.
 
 # Functionality
 

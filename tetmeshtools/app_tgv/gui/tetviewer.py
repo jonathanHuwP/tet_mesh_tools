@@ -25,10 +25,10 @@ This work was funded by Joanna Leng's EPSRC funded RSE Fellowship (EP/R025819/1)
 from enum import Enum
 import numpy as np
 
-import PyQt5.QtWidgets as qw
-import PyQt5.QtCore as qc
-import PyQt5.QtGui as qg
-import PyQt5.Qt as qt
+import PyQt6.QtWidgets as qw
+import PyQt6.QtCore as qc
+import PyQt6.QtGui as qg
+from PyQt6.QtCore import Qt
 
 import OpenGL.GL as gl
 import OpenGL.GLU as glu
@@ -321,7 +321,7 @@ class TetViewer(qw.QOpenGLWidget):
         Args:
             check_state (Qt.CheckState)
         """
-        if check_state == qt.Qt.CheckState.Checked:
+        if check_state == Qt.CheckState.Checked:
             self._state.set_show_faces(True)
         else:
             self._state.set_show_faces(False)
@@ -335,7 +335,7 @@ class TetViewer(qw.QOpenGLWidget):
         Args:
             check_state (Qt.CheckState)
         """
-        if check_state == qt.Qt.CheckState.Checked:
+        if check_state == Qt.CheckState.Checked:
             self._state.set_show_lattice(True)
         else:
             self._state.set_show_lattice(False)
@@ -552,7 +552,7 @@ class TetViewer(qw.QOpenGLWidget):
         Args:
             check_state (Qt.CheckState)
         """
-        if check_state == qt.Qt.CheckState.Unchecked:
+        if check_state == Qt.CheckState.Unchecked:
             self._state.set_display_current_tet(False)
         else:
             self._state.set_display_current_tet(True)
