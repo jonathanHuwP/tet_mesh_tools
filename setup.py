@@ -30,7 +30,8 @@ setup(
               'tetmeshtools.scripts',
               'tetmeshtools.meshtools',
               'tetmeshtools.app_tgv',
-              'tetmeshtools.app_tgv.gui'],
+              'tetmeshtools.app_tgv.gui',
+              'tetmeshtools.tests'],
     install_requires=[
         'numpy',
         'vtk',

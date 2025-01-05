@@ -88,16 +88,16 @@ class TestGuiControls(unittest.TestCase):
         spy1 = QtTest.QSignalSpy(main_win._surfaceButton.stateChanged)
         spy2 = QtTest.QSignalSpy(main_win._surfaceLatticeButton.stateChanged)
 
-        QtTest.QTest.mouseClick(main_win._showTetBox, Qt.LeftButton)
-        QtTest.QTest.mouseClick(main_win._surfaceButton, Qt.LeftButton)
-        QtTest.QTest.mouseClick(main_win._surfaceLatticeButton, Qt.LeftButton)
+        QtTest.QTest.mouseClick(main_win._showTetBox, Qt.MouseButton.LeftButton)
+        QtTest.QTest.mouseClick(main_win._surfaceButton, Qt.MouseButton.LeftButton)
+        QtTest.QTest.mouseClick(main_win._surfaceLatticeButton, Qt.MouseButton.LeftButton)
 
         self.assertEqual(len(spy0), 1, "_showTetBox: the wrong number of signals emitted")
         self.assertEqual(len(spy1), 1, "_surfaceButton: the wrong number of signals emitted")
         self.assertEqual(len(spy2), 1, "_surfaceLatticeButton: the wrong number of signals emitted")
 
         self.assertEqual(spy0[0][0], Qt.CheckState.Unchecked, "_showTetBox wrong check state")
-        self.assertEqual(spy1[0][0], Qt.CheckState.Checked, "_showTetBox wrong check statee")
+        self.assertEqual(spy1[0][0], Qt.CheckState.Checked, "_showTetBox wrong check state")
         self.assertEqual(spy2[0][0], Qt.CheckState.Checked, "_showTetBox wrong check state")
 
         self.assertFalse(main_win._tetViewer._state._display_current_tet,
