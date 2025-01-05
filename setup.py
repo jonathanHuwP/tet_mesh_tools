@@ -26,12 +26,16 @@ setup(
     description ='Meshing tools developed for the Fluctuating Finite Element Analysis tool (FFEA).',
     url='https://github.com/jonathanHuwP/tet_mesh_tools',
     license='GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007',
-    packages=['tetmeshtools'],
+    packages=['tetmeshtools',
+              'tetmeshtools.scripts',
+              'tetmeshtools.meshtools',
+              'tetmeshtools.app_tgv',
+              'tetmeshtools.app_tgv.gui'],
     install_requires=[
-        'argparse',
         'numpy',
         'vtk',
-        'mrcfile'
+        'mrcfile',
+        'pyqt6'
     ],
     entry_points={
         'console_scripts': [

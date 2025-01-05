@@ -122,6 +122,10 @@ Install the package to the environment using pip.
 
 `pip install -e . --config-settings editable_mode=strict`
 
+To avoid accumulating compressed packages you can clean your conda cache.
+
+`conda clean --all`
+
 This will produce directories called 'tetmeshtools.egg-info' and 'build', do not move, rename, or delete these directories.
 
 Make the documentation run doxygen
