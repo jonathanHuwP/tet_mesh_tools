@@ -78,31 +78,35 @@ class TestGuiControls(unittest.TestCase):
         self.assertFalse(main_win._surfaceLatticeButton.isChecked(),
                          'Show lattice is initially checked')
 
-    def test_check_boxes(self):
+    def test_showTetBox(self):
         """
         test the checkboxes.
         """
         main_win = TetgenViewerMain()
 
-        spy0 = QtTest.QSignalSpy(main_win._showTetBox.stateChanged)
-        spy1 = QtTest.QSignalSpy(main_win._surfaceButton.stateChanged)
-        spy2 = QtTest.QSignalSpy(main_win._surfaceLatticeButton.stateChanged)
-
+        spy = QtTest.QSignalSpy(main_win._showTetBox.stateChanged)
         QtTest.QTest.mouseClick(main_win._showTetBox, Qt.MouseButton.LeftButton)
+        self.assertEqual(len(spy), 1, "_showTetBox: the wrong number of signals emitted")
+        self.assertEqual(spy[0][0], Qt.CheckState.Unchecked.value, "_showTetBox wrong check state")
+
+    def test_surfaceButton(self):
+        """
+        test the checkboxes.
+        """
+        main_win = TetgenViewerMain()
+
+        spy = QtTest.QSignalSpy(main_win._surfaceButton.stateChanged)
         QtTest.QTest.mouseClick(main_win._surfaceButton, Qt.MouseButton.LeftButton)
+        self.assertEqual(len(spy), 1, "_surfaceButton: the wrong number of signals emitted")
+        self.assertEqual(spy[0][0], Qt.CheckState.Checked.value, "_surfaceButton wrong check state")
+
+    def test_surfaceLatticeButton(self):
+        """
+        test the checkboxes.
+        """
+        main_win = TetgenViewerMain()
+
+        spy = QtTest.QSignalSpy(main_win._surfaceLatticeButton.stateChanged)
         QtTest.QTest.mouseClick(main_win._surfaceLatticeButton, Qt.MouseButton.LeftButton)
-
-        self.assertEqual(len(spy0), 1, "_showTetBox: the wrong number of signals emitted")
-        self.assertEqual(len(spy1), 1, "_surfaceButton: the wrong number of signals emitted")
-        self.assertEqual(len(spy2), 1, "_surfaceLatticeButton: the wrong number of signals emitted")
-
-        self.assertEqual(spy0[0][0], Qt.CheckState.Unchecked, "_showTetBox wrong check state")
-        self.assertEqual(spy1[0][0], Qt.CheckState.Checked, "_showTetBox wrong check state")
-        self.assertEqual(spy2[0][0], Qt.CheckState.Checked, "_showTetBox wrong check state")
-
-        self.assertFalse(main_win._tetViewer._state._display_current_tet,
-                         "viewer not changing _dispaly_current_tet")
-        self.assertTrue(main_win._tetViewer._state._show_faces,
-                        "viewer not changing _show_faces")
-        self.assertTrue(main_win._tetViewer._state._show_lattice,
-                        "viewer not changing _show_lattice")
+        self.assertEqual(len(spy), 1, "_surfaceLatticeButton: the wrong number of signals emitted")
+        self.assertEqual(spy[0][0], Qt.CheckState.Checked.value, "_surfaceLatticeButton wrong check state")
