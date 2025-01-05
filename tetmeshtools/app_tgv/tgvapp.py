@@ -1,5 +1,5 @@
 """
-the application fthat runs the tetviewer
+the application that runs the tetviewer
 
 -------------------------------------
 
