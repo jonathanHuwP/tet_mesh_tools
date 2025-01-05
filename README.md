@@ -112,7 +112,7 @@ If you have an old conda environment remove it.
 
 Create a new environment.
 
-`conda env create -f .\environment_tetmesht.yml`
+`conda env create -f .\tetmesh_conda_env.yml`
 
 Activate the environment.
 
