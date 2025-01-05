@@ -120,9 +120,9 @@ Activate the environment.
 
 Install the package to the environment using pip.
 
-`pip install --editable .`
+`pip install -e . --config-settings editable_mode=strict`
 
-This will produce a directory called 'tetmeshtools.egg-info', do not move, rename, or delete this directory.
+This will produce directories called 'tetmeshtools.egg-info' and 'build', do not move, rename, or delete these directories.
 
 Make the documentation run doxygen
 
