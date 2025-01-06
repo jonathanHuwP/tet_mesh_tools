@@ -140,6 +140,8 @@ To remove the environment:
 
 `conda env remove --name tetmesht`
 
+If you wish to use Qt Designer to edit the '.ui' file you will have to install designer as well.
+
 ### Building the Documentation
 
 The documentation is build using doxygen,and can be built by running the command 'doxygen' in the command tool window. This will create a directory 'doc/html' holding the documentation web pages, the root page being 'index.html'. To modify doxygen's behaviour edit the file 'Doxyfile' either manually or using doxywizard. For instance, to add Latex output change the flag on line 1806 from 'NO' to 'YES'.

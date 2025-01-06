@@ -33,6 +33,11 @@ setup(
               'tetmeshtools.app_tgv.gui',
               'tetmeshtools.tests'],
     install_requires=[
+        'scipy',
+        'pylint',
+        'pyopengl',
+        'pyrr',
+        'biopython',
         'numpy',
         'vtk',
         'mrcfile',

@@ -509,9 +509,9 @@ class TetViewer(qgl.QOpenGLWidget):
         """
         callback for the press of a mouse button
         """
-        if event.buttons() in (qc.Qt.LeftButton, qc.Qt.RightButton):
+        if event.buttons() in (qc.Qt.MouseButton.LeftButton, qc.Qt.MouseButton.RightButton):
             self._mouse_position = event.pos()
-            if event.buttons() == qc.Qt.LeftButton:
+            if event.buttons() == qc.Qt.MouseButton.LeftButton:
                 self._mouse_state = MouseStates.MOTION
             else:
                 self._mouse_state = MouseStates.ZOOM
