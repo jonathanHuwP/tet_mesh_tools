@@ -322,7 +322,7 @@ class TetViewer(qgl.QOpenGLWidget):
         Args:
             check_state (Qt.CheckState)
         """
-        if check_state == Qt.CheckState.Checked:
+        if check_state == Qt.CheckState.Checked.value:
             self._state.set_show_faces(True)
         else:
             self._state.set_show_faces(False)
@@ -336,7 +336,7 @@ class TetViewer(qgl.QOpenGLWidget):
         Args:
             check_state (Qt.CheckState)
         """
-        if check_state == Qt.CheckState.Checked:
+        if check_state == Qt.CheckState.Checked.value:
             self._state.set_show_lattice(True)
         else:
             self._state.set_show_lattice(False)
@@ -553,7 +553,7 @@ class TetViewer(qgl.QOpenGLWidget):
         Args:
             check_state (Qt.CheckState)
         """
-        if check_state == Qt.CheckState.Unchecked:
+        if check_state == Qt.CheckState.Unchecked.value:
             self._state.set_display_current_tet(False)
         else:
             self._state.set_display_current_tet(True)
